@@ -1,0 +1,85 @@
+/* =========================
+   SIDEBAR
+   ========================= */
+   section[data-testid="stSidebar"] {
+    background-color: #eef2f7 !important;
+  }
+  
+  /* =========================
+     BACKGROUND OVERLAY
+     (softens the image behind everything)
+     ========================= */
+  .stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.35) !important; /* raise to 0.5 if you want more wash */
+    z-index: -1;
+  }
+  
+  /* =========================
+     MAIN CONTENT PANEL
+     (this makes your content sit "on top")
+     Works across Streamlit versions
+     ========================= */
+  div[data-testid="stAppViewContainer"] .block-container,
+  div[data-testid="stMainBlockContainer"],
+  div.block-container {
+    background: rgba(255, 255, 255, 0.86) !important;
+    border-radius: 28px !important;
+    padding: 2rem 2rem 2.5rem 2rem !important;
+    max-width: 1100px !important;
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.14) !important;
+    margin-top: 1.25rem !important;
+  }
+  
+  /* Make the outer main area transparent so the panel is visible */
+  div[data-testid="stAppViewContainer"],
+  div[data-testid="stAppViewContainer"] > .main,
+  section.main {
+    background: transparent !important;
+  }
+  
+  /* =========================
+     TEXT
+     ========================= */
+  h1, h2, h3 {
+    color: #2f3640 !important;
+  }
+  .small {
+    opacity: 0.75;
+  }
+  
+  /* =========================
+     BUTTONS
+     ========================= */
+  button {
+    border-radius: 14px !important;
+    font-weight: 600 !important;
+  }
+  
+  /* =========================
+     INPUTS
+     ========================= */
+  .stTextInput input,
+  .stTextArea textarea {
+    border-radius: 14px !important;
+  }
+  
+  /* Selectbox */
+  div[data-baseweb="select"] > div {
+    border-radius: 14px !important;
+  }
+  
+  /* =========================
+     YOUR CARDS
+     ========================= */
+  .card {
+    background: rgba(255, 255, 255, 0.88) !important;
+    border-radius: 18px !important;
+    padding: 1rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  
+
